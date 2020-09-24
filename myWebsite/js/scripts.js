@@ -54,3 +54,18 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
+
+
+// Star Animation
+var i;
+var star = document.getElementsByClassName("star").length;
+//var length = document.documentElement.clientWidth;
+var lengthx = document.getElementById('blockstar').clientWidth;
+// we use for loop to assign unique random values for the x position and animation speed
+for (i = 0; i < star; i++) {
+  x = Math.floor(Math.random() * lengthx);
+  d = Math.floor(Math.random() * 10);
+document.getElementsByClassName("star")[i].style.transform = "translateX("+ x +"px)";
+document.getElementsByClassName("star")[i].style.animationDuration = d + "s";  
+} 
+
